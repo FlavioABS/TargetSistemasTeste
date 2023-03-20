@@ -1,0 +1,22 @@
+while True:
+    try:
+        num = int(input('Seu número pertence a sequência Fibonacci? \n Indique o número:'))
+    except ValueError:
+        print('Precisamos de um número inteiro!')
+    else:
+        break
+
+n1 = 0
+n2 = 1
+nf = 0
+
+while True:
+    if num == nf:
+        print('Número está presente na sequência Fibonacci!')
+        break
+    elif nf > num:
+        print('Número não está presente na sequência Fibonacci!')
+        break
+    nf = n1 + n2
+    n1 = n2
+    n2 = nf
